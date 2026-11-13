@@ -1,2 +1,1 @@
-# declans-electric-cars
-Made for haven. This is a game about someone called Declan and his loves for electric cars.
+This is about declan! he loves reparing cars, He HATES gas cars! He loves electric cars to save the enviroment!!!!!!!!!!!!!!!!!!!!!!!!!!!!
