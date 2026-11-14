@@ -20,6 +20,6 @@ func _on_creditsButton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/credits.tscn")
 	sfx_clicky.play()
 func _on_playbutton_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+	get_tree().change_scene_to_file("res://scenes/difficulty_selector.tscn")
 	sfx_clicky.set_stream(stream)
 	sfx_clicky.play()

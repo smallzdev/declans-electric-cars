@@ -1,12 +1,9 @@
 [gd_scene format=3 uid="uid://c7picmoeuvyjs"]
 
+[ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="1_0rdsr"]
 [ext_resource type="Script" uid="uid://dr1oigndqfo3r" path="res://scenes/character_body_2d.gd" id="1_d2op2"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="1_s3esy"]
 [ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scenes/carsprite.gd" id="2_72e8q"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_72e8q"]
-atlas = ExtResource("1_s3esy")
-region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2op2"]
 atlas = ExtResource("1_s3esy")
@@ -52,9 +49,6 @@ region = Rect2(32, 96, 32, 32)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_72e8q")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_d2op2")
 }, {
 "duration": 1.0,
@@ -92,6 +86,36 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
 size = Vector2(267, 387)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vddhp"]
+size = Vector2(38, 37.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_br2rd"]
+size = Vector2(39, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lht4u"]
+size = Vector2(60, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2op2"]
+size = Vector2(24, 84)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyble"]
+size = Vector2(109, 146)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgybc"]
+size = Vector2(24.5, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rdsr"]
+size = Vector2(24.5, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxny"]
+size = Vector2(36.25, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s6hvq"]
+size = Vector2(36.5, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n3id2"]
+size = Vector2(48, 72)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypnfv"]
 size = Vector2(128.98871, 102.941086)
 
@@ -114,25 +138,26 @@ offset_top = -90.0
 offset_right = 1241.0
 offset_bottom = 747.0
 
-[node name="Panel" type="Panel" parent="." unique_id=1473717622]
+[node name="mainPanel" type="Panel" parent="." unique_id=1473717622]
 offset_left = 56.0
 offset_top = 32.0
 offset_right = 1105.0
 offset_bottom = 605.0
 
-[node name="statLabel" type="Label" parent="Panel" unique_id=1489983222]
+[node name="statLabel" type="Label" parent="mainPanel" unique_id=1489983222]
 layout_mode = 0
 offset_left = 13.0
 offset_top = 8.0
 offset_right = 156.0
 offset_bottom = 135.0
+theme_override_fonts/font = ExtResource("1_0rdsr")
 text = "Cars Served: 
 Gas Cars Rejected:
 Cars Repaired:
 Failed Repairs:
 Total Rating:"
 
-[node name="startButton" type="Button" parent="Panel" unique_id=1098849204]
+[node name="startButton" type="Button" parent="mainPanel" unique_id=1098849204]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 0.035
@@ -144,10 +169,10 @@ offset_bottom = 493.835
 theme_override_font_sizes/font_size = 33
 text = "start"
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="Panel" unique_id=982428187]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="mainPanel" unique_id=982428187]
 script = ExtResource("1_d2op2")
 
-[node name="carSprite" type="AnimatedSprite2D" parent="Panel/CharacterBody2D" unique_id=458805979]
+[node name="carSprite" type="AnimatedSprite2D" parent="mainPanel/CharacterBody2D" unique_id=458805979]
 unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(542, 246)
@@ -155,9 +180,61 @@ scale = Vector2(12, 12)
 sprite_frames = SubResource("SpriteFrames_bqqt6")
 script = ExtResource("2_72e8q")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/CharacterBody2D" unique_id=375917555]
+[node name="fullBodyCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=375917555]
 position = Vector2(547.5, 243.5)
 shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1716378756]
+position = Vector2(513, 215.75)
+shape = SubResource("RectangleShape2D_vddhp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=199484790]
+position = Vector2(464.5, 240)
+shape = SubResource("RectangleShape2D_br2rd")
+
+[node name="HVCable1Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1208195998]
+position = Vector2(596, 144)
+shape = SubResource("RectangleShape2D_lht4u")
+
+[node name="HVCable1Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=886250481]
+position = Vector2(626, 192)
+shape = SubResource("RectangleShape2D_d2op2")
+
+[node name="BatteryBackCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1892720498]
+position = Vector2(548.5, 246)
+shape = SubResource("RectangleShape2D_fyble")
+
+[node name="HVCable2Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=925990686]
+position = Vector2(445.75, 282)
+shape = SubResource("RectangleShape2D_mgybc")
+
+[node name="HVCable2Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1695823423]
+position = Vector2(458, 312)
+shape = SubResource("RectangleShape2D_0rdsr")
+
+[node name="HVCable2Collision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1552592247]
+position = Vector2(487.875, 330)
+shape = SubResource("RectangleShape2D_ygxny")
+
+[node name="HVCable3Collision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1986702178]
+position = Vector2(547.75, 323.75)
+shape = SubResource("RectangleShape2D_s6hvq")
+
+[node name="ventCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=677331527]
+position = Vector2(458, 90)
+shape = SubResource("RectangleShape2D_n3id2")
+
+[node name="ventCollision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2099292475]
+position = Vector2(638, 90)
+shape = SubResource("RectangleShape2D_n3id2")
+
+[node name="ventCollision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2021915373]
+position = Vector2(458, 402)
+shape = SubResource("RectangleShape2D_n3id2")
+
+[node name="ventCollision4" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1808934683]
+position = Vector2(638, 402)
+shape = SubResource("RectangleShape2D_n3id2")
 
 [node name="Borders" type="Control" parent="." unique_id=910012368]
 layout_mode = 3
@@ -212,4 +289,5 @@ position = Vector2(0.43873215, -7.529297)
 scale = Vector2(0.10968296, 3.7647026)
 shape = SubResource("RectangleShape2D_j3pc0")
 
-[connection signal="pressed" from="Panel/startButton" to="Panel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
+[connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
+[connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D" method="_on_start_button_pressed"]

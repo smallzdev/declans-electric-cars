@@ -2,6 +2,9 @@ extends Node
 
 # global variables
 
+# difficulty
+var difficulty = null
+
 # stats
 var carsServed = 0
 var gasRejected = 0
