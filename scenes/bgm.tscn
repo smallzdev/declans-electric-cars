@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://x82a0cvtjv5y"]
+
+[ext_resource type="AudioStream" uid="uid://bbsocykiekvqo" path="res://assets/morningmood.mp3" id="1_q5y64"]
+
+[node name="bgm" type="AudioStreamPlayer" unique_id=2098463671]
+stream = ExtResource("1_q5y64")
+autoplay = true

@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://b21xttxhtnc0q"]
 
+[ext_resource type="PackedScene" uid="uid://x82a0cvtjv5y" path="res://scenes/bgm.tscn" id="1_d52np"]
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_lcs0l"]
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="1_wq8l7"]
 [ext_resource type="Texture2D" uid="uid://cb0r0vtvlbqjt" path="res://assets/paleorange-textbox.png" id="2_1octt"]
+[ext_resource type="Script" uid="uid://c8mdfbqoh4a5r" path="res://scenes/bgm.gd" id="2_2tlxm"]
 [ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="3_md1pp"]
 [ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="5_of347"]
 
@@ -28,6 +30,11 @@ offset_left = -139.0
 offset_top = -90.0
 offset_right = 1241.0
 offset_bottom = 732.0
+
+[node name="bgm" parent="ColorRect" unique_id=1933076139 instance=ExtResource("1_d52np")]
+position = Vector2(664, 341)
+autoplay = false
+script = ExtResource("2_2tlxm")
 
 [node name="title" type="Label" parent="." unique_id=2132851483]
 offset_left = 4.0

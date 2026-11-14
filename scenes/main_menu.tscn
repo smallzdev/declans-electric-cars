@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="2_wu84c"]
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="3_bqqt6"]
 [ext_resource type="PackedScene" uid="uid://ct8j233gmljek" path="res://scenes/sfx_clicky.tscn" id="5_8ln24"]
+[ext_resource type="PackedScene" uid="uid://x82a0cvtjv5y" path="res://scenes/bgm.tscn" id="6_rtw2f"]
 
 [sub_resource type="Theme" id="Theme_8gwij"]
 
@@ -110,6 +111,9 @@ script = ExtResource("2_ekxnf")
 [node name="clicky" type="AudioStreamPlayer" parent="." unique_id=1882000893]
 
 [node name="sfx_clicky" parent="." unique_id=1275234143 instance=ExtResource("5_8ln24")]
+
+[node name="bgm" parent="." unique_id=1933076139 instance=ExtResource("6_rtw2f")]
+position = Vector2(203, 115)
 
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playbutton_pressed"]
 [connection signal="pressed" from="creditsButton" to="playButton" method="_on_play_button_pressed"]
