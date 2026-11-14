@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dr1oigndqfo3r" path="res://scenes/character_body_2d.gd" id="1_d2op2"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="1_s3esy"]
 [ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scenes/carsprite.gd" id="2_72e8q"]
-[ext_resource type="Texture2D" uid="uid://ypkfvimkgpo5" path="res://icon.svg" id="4_0rdsr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72e8q"]
 atlas = ExtResource("1_s3esy")
@@ -93,11 +92,13 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
 size = Vector2(267, 387)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rdsr"]
-size = Vector2(128.81494, 164.41156)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ypnfv"]
+size = Vector2(128.98871, 102.941086)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ipu61"]
 size = Vector2(38, 705.5)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_0rdsr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udkci"]
 size = Vector2(1194, 34)
@@ -166,50 +167,49 @@ offset_bottom = 40.0
 
 [node name="LeftWall" type="Area2D" parent="Borders" unique_id=2139318185]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/LeftWall" unique_id=1632792236]
-position = Vector2(-18.835943, 330.4782)
+[node name="BorderLeftSprite" type="StaticBody2D" parent="Borders/LeftWall" unique_id=1459876010]
+position = Vector2(-19.000002, 332.00003)
 rotation = 1.5707964
 scale = Vector2(5.504358, 0.26562524)
-shape = SubResource("RectangleShape2D_0rdsr")
 
-[node name="BorderLeftSprite" type="Sprite2D" parent="Borders/LeftWall" unique_id=2095600290]
-position = Vector2(-19.000008, 329.00003)
-rotation = 1.5707964
-scale = Vector2(5.504358, 0.26562524)
-texture = ExtResource("4_0rdsr")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/LeftWall/BorderLeftSprite" unique_id=986705312]
+position = Vector2(-1.4533997, -61.47056)
+shape = SubResource("RectangleShape2D_ypnfv")
 
 [node name="RightWall" type="Area2D" parent="Borders" unique_id=1958226653]
 
-[node name="BorderRightSprite" type="Sprite2D" parent="Borders/RightWall" unique_id=1815830640]
+[node name="BorderRightSprite" type="StaticBody2D" parent="Borders/RightWall" unique_id=201324174]
 position = Vector2(1168, 326)
 rotation = 1.5707964
 scale = Vector2(5.504358, 0.26562524)
-texture = ExtResource("4_0rdsr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/RightWall" unique_id=1295278607]
-position = Vector2(1168, 326.25)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/RightWall/BorderRightSprite" unique_id=1295278607]
+position = Vector2(0.045417786, 0)
+rotation = -1.5707964
+scale = Vector2(3.7647026, 0.18167424)
 shape = SubResource("RectangleShape2D_ipu61")
 
 [node name="TopWall" type="Area2D" parent="Borders" unique_id=724713694]
 
-[node name="BorderTopSprite" type="Sprite2D" parent="Borders/TopWall" unique_id=1957253491]
+[node name="BorderTopSprite" type="StaticBody2D" parent="Borders/TopWall" unique_id=607858307]
 position = Vector2(588, -13)
 scale = Vector2(9.117187, 0.26562524)
-texture = ExtResource("4_0rdsr")
+physics_material_override = SubResource("PhysicsMaterial_0rdsr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/TopWall" unique_id=1765027765]
-position = Vector2(587, -13)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/TopWall/BorderTopSprite" unique_id=1765027765]
+position = Vector2(-0.109687805, 0)
+scale = Vector2(0.10968296, 3.7647026)
 shape = SubResource("RectangleShape2D_udkci")
 
 [node name="BottomWall" type="Area2D" parent="Borders" unique_id=1314958344]
 
-[node name="BorderBottomSprite" type="Sprite2D" parent="Borders/BottomWall" unique_id=1684340899]
+[node name="BorderBottomSprite" type="StaticBody2D" parent="Borders/BottomWall" unique_id=2100803745]
 position = Vector2(576.5, 664)
 scale = Vector2(9.117187, 0.26562524)
-texture = ExtResource("4_0rdsr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall" unique_id=139201839]
-position = Vector2(580.5, 662)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall/BorderBottomSprite" unique_id=139201839]
+position = Vector2(0.43873215, -7.529297)
+scale = Vector2(0.10968296, 3.7647026)
 shape = SubResource("RectangleShape2D_j3pc0")
 
 [connection signal="pressed" from="Panel/startButton" to="Panel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
