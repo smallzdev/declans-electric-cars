@@ -2,7 +2,7 @@
 
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_lcs0l"]
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="1_wq8l7"]
-[ext_resource type="Texture2D" uid="uid://jb0vyb6xcwhj" path="res://assets/paleorange-textbox.png" id="2_1octt"]
+[ext_resource type="Texture2D" uid="uid://cb0r0vtvlbqjt" path="res://assets/paleorange-textbox.png" id="2_1octt"]
 [ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="3_md1pp"]
 [ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="5_of347"]
 
@@ -68,7 +68,7 @@ gas cars for some reason, we
 don't know why. He just does. :0"
 
 [node name="BlackButton" parent="." unique_id=1395699096 instance=ExtResource("5_of347")]
-offset_left = 29.0
-offset_top = 420.0
-offset_right = 229.0
-offset_bottom = 620.0
+offset_left = 2.000002
+offset_top = 506.99997
+offset_right = 202.0
+offset_bottom = 707.0

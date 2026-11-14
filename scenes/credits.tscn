@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="1_0bpdh"]
 [ext_resource type="Script" uid="uid://ddh6fgud376uh" path="res://scenes/link_button.gd" id="2_2ckv8"]
+[ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="2_8gwij"]
 [ext_resource type="Script" uid="uid://ce2x8wt0lv62e" path="res://scenes/link_button_2.gd" id="3_2fbfq"]
 [ext_resource type="Script" uid="uid://dwrf8pynba7b7" path="res://scenes/link_button_3.gd" id="4_8gwij"]
 
@@ -17,24 +18,25 @@ offset_right = 1241.0
 offset_bottom = 732.0
 
 [node name="Button" parent="." unique_id=1395699096 instance=ExtResource("1_0bpdh")]
-offset_left = 46.0
-offset_top = 410.0
-offset_right = 246.0
-offset_bottom = 610.0
+offset_left = 1.0000005
+offset_top = 508.00006
+offset_right = 201.0
+offset_bottom = 708.00006
 theme_override_styles/normal = SubResource("StyleBoxFlat_wu84c")
 
 [node name="smallz" type="LinkButton" parent="." unique_id=2092743426]
 anchors_preset = -1
 anchor_right = 0.27400002
 anchor_bottom = 0.21200001
-offset_left = 19.0
-offset_top = 42.0
-offset_right = 658.0
-offset_bottom = 92.0
+offset_left = 131.0
+offset_top = 4.0
+offset_right = 1012.0
+offset_bottom = 54.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.24705882, 0.24705882, 0.24705882, 1)
 theme_override_colors/font_pressed_color = Color(0.15127608, 0.15127608, 0.15127608, 1)
 theme_override_colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+theme_override_fonts/font = ExtResource("2_8gwij")
 theme_override_font_sizes/font_size = 36
 text = "              https://github.com/smallzdev"
 underline = 1
@@ -42,14 +44,15 @@ script = ExtResource("2_2ckv8")
 metadata/_edit_use_anchors_ = true
 
 [node name="pcb" type="LinkButton" parent="." unique_id=1443785172]
-offset_left = 26.0
-offset_top = 84.0
-offset_right = 672.0
-offset_bottom = 134.0
+offset_left = 155.0
+offset_top = 39.0
+offset_right = 1002.0
+offset_bottom = 89.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.24705882, 0.24705882, 0.24705882, 1)
 theme_override_colors/font_pressed_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 theme_override_colors/font_hover_color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+theme_override_fonts/font = ExtResource("2_8gwij")
 theme_override_font_sizes/font_size = 36
 text = "         https://github.com/watchtheads"
 underline = 1
@@ -57,37 +60,40 @@ script = ExtResource("3_2fbfq")
 metadata/_edit_use_anchors_ = true
 
 [node name="repo" type="LinkButton" parent="." unique_id=2126299621]
-offset_left = 20.0
-offset_top = -2.0
-offset_right = 1122.0
-offset_bottom = 48.0
+offset_left = -397.0
+offset_top = 320.0
+offset_right = 1173.0
+offset_bottom = 370.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_focus_color = Color(0.24840015, 0.24840018, 0.24840012, 1)
 theme_override_colors/font_pressed_color = Color(0.15294118, 0.15294118, 0.15294118, 1)
 theme_override_colors/font_hover_color = Color(0.0728425, 0.07284265, 0.07284289, 1)
-theme_override_font_sizes/font_size = 36
+theme_override_fonts/font = ExtResource("2_8gwij")
+theme_override_font_sizes/font_size = 35
 text = "                        https://github.com/smallzdev/declans-electric-cars"
 underline = 1
 script = ExtResource("4_8gwij")
 metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="." unique_id=372881774]
-offset_left = 20.0
-offset_top = 43.0
-offset_right = 142.0
-offset_bottom = 162.0
+offset_left = 210.0
+offset_top = 4.0
+offset_right = 364.0
+offset_bottom = 123.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8gwij")
 theme_override_font_sizes/font_size = 36
 text = "Smallz:
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Label2" type="Label" parent="." unique_id=1587412799]
-offset_left = 23.0
-offset_top = 87.0
-offset_right = 135.0
-offset_bottom = 206.0
+offset_left = 215.0
+offset_top = 39.0
+offset_right = 1178.0
+offset_bottom = 196.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8gwij")
 theme_override_font_sizes/font_size = 36
 text = "pcb:
 
@@ -96,10 +102,12 @@ made for hack club haven sydney"
 metadata/_edit_use_anchors_ = true
 
 [node name="Label3" type="Label" parent="." unique_id=205767979]
-offset_left = 20.0
-offset_right = 232.0
-offset_bottom = 119.0
+offset_left = 422.0
+offset_top = 283.0
+offset_right = 683.0
+offset_bottom = 402.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_8gwij")
 theme_override_font_sizes/font_size = 36
 text = "github repo:"
 metadata/_edit_use_anchors_ = true
