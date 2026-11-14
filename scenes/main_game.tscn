@@ -289,5 +289,8 @@ position = Vector2(0.43873215, -7.529297)
 scale = Vector2(0.10968296, 3.7647026)
 shape = SubResource("RectangleShape2D_j3pc0")
 
+[node name="Timer" type="Timer" parent="." unique_id=1127184483]
+wait_time = 5.0
+
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D" method="_on_start_button_pressed"]
