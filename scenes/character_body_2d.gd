@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var SPEED = 1000.0
+var SPEED = 1500.0
 
 func _ready() -> void:
 	velocity = Vector2(-200, -200).normalized() * SPEED
