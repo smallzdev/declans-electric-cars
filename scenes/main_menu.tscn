@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://xmhxbhstdvrx"]
+
+[ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://bjymgx87wfrcf" path="res://scripts/mainmenubuttons.gd" id="2_ekxnf"]
+
+[node name="Node2D" type="Node2D" unique_id=517041753]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=521707275]
+offset_left = -139.0
+offset_top = -90.0
+offset_right = 1241.0
+offset_bottom = 732.0
+
+[node name="title" type="Label" parent="." unique_id=886488933]
+offset_top = 2.0
+offset_right = 1149.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 69
+text = "Declan's Electric Cars"
+horizontal_alignment = 1
+
+[node name="playButton" type="Button" parent="." unique_id=1433591265]
+offset_left = 418.0
+offset_top = 159.0
+offset_right = 729.0
+offset_bottom = 249.0
+theme_override_font_sizes/font_size = 50
+text = "Play"
+script = ExtResource("2_ekxnf")
+
+[node name="creditsButton" type="Button" parent="." unique_id=1827576543]
+offset_left = 417.0
+offset_top = 294.0
+offset_right = 728.0
+offset_bottom = 384.0
+theme_override_font_sizes/font_size = 50
+text = "Credits"
+script = ExtResource("2_ekxnf")
+
+[node name="storyButton" type="Button" parent="." unique_id=301347002]
+offset_left = 422.0
+offset_top = 430.0
+offset_right = 733.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 50
+text = "Story"
+script = ExtResource("2_ekxnf")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391178809]
+
+[connection signal="pressed" from="creditsButton" to="playButton" method="_on_play_button_pressed"]
+[connection signal="pressed" from="creditsButton" to="creditsButton" method="_on_creditsButton_pressed"]
+[connection signal="pressed" from="storyButton" to="storyButton" method="_on_storybutton_pressed"]
