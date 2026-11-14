@@ -7,13 +7,13 @@
 bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbfq"]
-border_color = Color(0.9122889, 0.9122889, 0.9122887, 1)
 
 [node name="BlackButton" type="Button" unique_id=1395699096]
 offset_left = -54.0
 offset_top = 469.0
 offset_right = 146.0
 offset_bottom = 669.0
+scale = Vector2(0.7, 0.7)
 theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
 theme_override_styles/hover = SubResource("StyleBoxFlat_2fbfq")
 icon = ExtResource("1_xnj1e")
