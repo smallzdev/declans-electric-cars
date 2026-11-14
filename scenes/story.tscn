@@ -1,3 +1,67 @@
 [gd_scene format=3 uid="uid://b21xttxhtnc0q"]
 
+[ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_lcs0l"]
+[ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="1_wq8l7"]
+[ext_resource type="Texture2D" uid="uid://jb0vyb6xcwhj" path="res://assets/paleorange-textbox.png" id="2_1octt"]
+[ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="3_md1pp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu84c"]
+atlas = ExtResource("1_wq8l7")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_of347"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu84c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D" unique_id=1675182783]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=811152367]
+offset_left = -139.0
+offset_top = -90.0
+offset_right = 1241.0
+offset_bottom = 732.0
+
+[node name="title" type="Label" parent="." unique_id=2132851483]
+offset_left = 4.0
+offset_top = 2.0
+offset_right = 1153.0
+offset_bottom = 75.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_lcs0l")
+theme_override_font_sizes/font_size = 69
+text = "Declan's story"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=313283762]
+texture_filter = 1
+position = Vector2(1004.0001, 447)
+scale = Vector2(13, 13)
+sprite_frames = SubResource("SpriteFrames_of347")
+
+[node name="PaleorangeTextbox" type="Sprite2D" parent="." unique_id=1103113110]
+texture_filter = 1
+position = Vector2(527, 414)
+scale = Vector2(26.218748, 16.1875)
+texture = ExtResource("2_1octt")
+
+[node name="Label" type="Label" parent="." unique_id=438841327]
+offset_left = 213.0
+offset_top = 294.0
+offset_right = 1555.0
+offset_bottom = 513.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_md1pp")
+theme_override_font_sizes/font_size = 33
+text = "Declan is a mechanic who loves
+EVs. For some reason, his cars
+bounce a lot because they are
+buzzing with energy. He also hates
+gas cars for some reason, we 
+don't know why. He just does. :0"

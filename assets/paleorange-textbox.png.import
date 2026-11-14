@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p4a85omjtttx"
-path="res://.godot/imported/white-ev.png-1b27c1f75647133032cdebbcd0d13a21.ctex"
+uid="uid://jb0vyb6xcwhj"
+path="res://.godot/imported/paleorange-textbox.png-351cf23a6055952f0f2c439733af6f50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/white-ev.png"
-dest_files=["res://.godot/imported/white-ev.png-1b27c1f75647133032cdebbcd0d13a21.ctex"]
+source_file="res://assets/paleorange-textbox.png"
+dest_files=["res://.godot/imported/paleorange-textbox.png-351cf23a6055952f0f2c439733af6f50.ctex"]
 
 [params]
 

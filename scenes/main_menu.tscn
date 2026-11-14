@@ -2,6 +2,22 @@
 
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_ekxnf"]
 [ext_resource type="Script" uid="uid://bjymgx87wfrcf" path="res://scripts/mainmenubuttons.gd" id="2_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="3_bqqt6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wu84c"]
+atlas = ExtResource("3_bqqt6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wu84c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Node2D" type="Node2D" unique_id=517041753]
 
@@ -48,8 +64,13 @@ theme_override_font_sizes/font_size = 50
 text = "Story"
 script = ExtResource("2_ekxnf")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1391178809]
+[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1586683472]
+texture_filter = 1
+position = Vector2(968.0001, 426)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_stm8k")
 
+[connection signal="pressed" from="playButton" to="playButton" method="_on_playbutton_pressed"]
 [connection signal="pressed" from="creditsButton" to="playButton" method="_on_play_button_pressed"]
 [connection signal="pressed" from="creditsButton" to="creditsButton" method="_on_creditsButton_pressed"]
 [connection signal="pressed" from="storyButton" to="storyButton" method="_on_storybutton_pressed"]
