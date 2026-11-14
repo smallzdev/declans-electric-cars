@@ -131,7 +131,7 @@ size = Vector2(1194, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
 size = Vector2(1201, 34)
 
-[node name="Node2D" type="Node2D" unique_id=1047734597]
+[node name="Node2D2" type="Node2D" unique_id=1047734597]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890717628]
 offset_left = -139.0
@@ -221,19 +221,19 @@ shape = SubResource("RectangleShape2D_ygxny")
 position = Vector2(547.75, 323.75)
 shape = SubResource("RectangleShape2D_s6hvq")
 
-[node name="ventCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=677331527]
+[node name="leftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=677331527]
 position = Vector2(458, 90)
 shape = SubResource("RectangleShape2D_n3id2")
 
-[node name="ventCollision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2099292475]
+[node name="rightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2099292475]
 position = Vector2(638, 90)
 shape = SubResource("RectangleShape2D_n3id2")
 
-[node name="ventCollision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2021915373]
+[node name="bleftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2021915373]
 position = Vector2(458, 402)
 shape = SubResource("RectangleShape2D_n3id2")
 
-[node name="ventCollision4" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1808934683]
+[node name="brightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1808934683]
 position = Vector2(638, 402)
 shape = SubResource("RectangleShape2D_n3id2")
 
@@ -299,5 +299,13 @@ offset_top = 466.0
 offset_right = 256.0
 offset_bottom = 666.0
 
+[node name="manualButton" type="Button" parent="." unique_id=825042965]
+offset_left = 954.0
+offset_top = 452.0
+offset_right = 1032.0
+offset_bottom = 522.0
+text = "MANUAL"
+
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D" method="_on_start_button_pressed"]
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
+[connection signal="pressed" from="manualButton" to="mainPanel/CharacterBody2D" method="_on_manual_button_pressed"]

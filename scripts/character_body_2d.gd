@@ -23,3 +23,7 @@ func _on_start_button_pressed() -> void:
 		SPEED = 1500.0
 	velocity = Vector2(-200, -200).normalized() * SPEED
 	print(SPEED)
+
+
+func _on_manual_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/manual.tscn")

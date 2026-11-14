@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bp7aqtpsmelge"]
+
+[ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_pxtqk"]
+[ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="2_ctj7d"]
+[ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scripts/carsprite.gd" id="3_6fbm8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2op2"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rdsr"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipu61"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ygxny"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi4c7"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70vka"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l77h"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqdth"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5cypo"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6v7o"]
+atlas = ExtResource("2_ctj7d")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4c15j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2op2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rdsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipu61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ygxny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi4c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70vka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l77h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqdth")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5cypo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6v7o")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1958289756]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1651431368]
+offset_left = -139.0
+offset_top = -90.0
+offset_right = 1241.0
+offset_bottom = 732.0
+
+[node name="title" type="Label" parent="." unique_id=1045941163]
+offset_left = -4.0
+offset_top = 32.0
+offset_right = 1145.0
+offset_bottom = 105.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pxtqk")
+theme_override_font_sizes/font_size = 69
+text = "Manual"
+horizontal_alignment = 1
+
+[node name="mainPanel" type="Panel" parent="." unique_id=2111573428]
+offset_left = 56.0
+offset_top = 32.0
+offset_right = 1105.0
+offset_bottom = 605.0
+
+[node name="carSprite" type="AnimatedSprite2D" parent="." unique_id=213069985]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(552, 340)
+scale = Vector2(14, 14)
+sprite_frames = SubResource("SpriteFrames_4c15j")
+script = ExtResource("3_6fbm8")
