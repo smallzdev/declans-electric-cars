@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ct8j233gmljek"]
+
+[ext_resource type="AudioStream" uid="uid://b47o28ol2usce" path="res://assets/clicky.mp3" id="1_f7vxc"]
+[ext_resource type="Script" uid="uid://byk1pe1ae7ahd" path="res://scenes/sfx_clicky.gd" id="2_f7vxc"]
+
+[node name="sfx_clicky" type="AudioStreamPlayer" unique_id=1275234143]
+stream = ExtResource("1_f7vxc")
+script = ExtResource("2_f7vxc")
