@@ -3,6 +3,7 @@ extends Button
 @onready var sfx_clicky: AudioStreamPlayer2D = $"../sfx_clicky"
 
 
+
 func _on_storybutton_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/story.tscn")
 	sfx_clicky.play()

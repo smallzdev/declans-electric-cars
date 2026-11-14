@@ -14,12 +14,6 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rtw2f"]
 bg_color = Color(0.09430439, 0.094304405, 0.094304346, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih6pn"]
-bg_color = Color(0, 0, 0, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lgdl"]
-bg_color = Color(0, 0, 0, 1)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wu84c"]
 atlas = ExtResource("3_bqqt6")
 region = Rect2(0, 0, 32, 32)
@@ -34,6 +28,12 @@ animations = [{
 "name": &"default",
 "speed": 5.0
 }]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ih6pn"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7lgdl"]
+bg_color = Color(0, 0, 0, 1)
 
 [node name="Node2D" type="Node2D" unique_id=517041753]
 
@@ -69,6 +69,12 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
 text = "Play"
 script = ExtResource("2_ekxnf")
 
+[node name="Sprite2D" type="AnimatedSprite2D" parent="playButton" unique_id=1586683472]
+texture_filter = 1
+position = Vector2(550.0001, 267)
+scale = Vector2(15, 15)
+sprite_frames = SubResource("SpriteFrames_stm8k")
+
 [node name="creditsButton" type="Button" parent="." unique_id=1827576543]
 offset_left = 417.0
 offset_top = 294.0
@@ -99,14 +105,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_rtw2f")
 text = "Story"
 script = ExtResource("2_ekxnf")
 
-[node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1586683472]
-texture_filter = 1
-position = Vector2(968.0001, 426)
-scale = Vector2(15, 15)
-sprite_frames = SubResource("SpriteFrames_stm8k")
-
 [node name="sfx_clicky" type="AudioStreamPlayer2D" parent="." unique_id=1819689545]
+position = Vector2(-0.00012207031, -3.0517578e-05)
 stream = ExtResource("5_8ln24")
+volume_db = 21.383
 
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playbutton_pressed"]
 [connection signal="pressed" from="creditsButton" to="playButton" method="_on_play_button_pressed"]
