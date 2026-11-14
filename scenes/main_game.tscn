@@ -131,9 +131,6 @@ size = Vector2(1194, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
 size = Vector2(1201, 34)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ygxny"]
-bg_color = Color(1, 1, 1, 1)
-
 [node name="Node2D" type="Node2D" unique_id=1047734597]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890717628]
@@ -296,15 +293,11 @@ shape = SubResource("RectangleShape2D_j3pc0")
 [node name="Timer" type="Timer" parent="." unique_id=1127184483]
 wait_time = 5.0
 
-[node name="Button" parent="." unique_id=1395699096 instance=ExtResource("5_ipu61")]
-offset_left = 132.99998
-offset_top = 508.0
-offset_right = 333.0
-offset_bottom = 578.0
-theme_override_font_sizes/font_size = 19
-theme_override_styles/normal = SubResource("StyleBoxFlat_ygxny")
-text = "back"
-icon = null
+[node name="BlackButton" parent="." unique_id=1395699096 instance=ExtResource("5_ipu61")]
+offset_left = 56.0
+offset_top = 466.0
+offset_right = 256.0
+offset_bottom = 666.0
 
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D" method="_on_start_button_pressed"]
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
