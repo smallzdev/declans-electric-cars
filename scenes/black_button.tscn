@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dswutdu57qymk"]
 
 [ext_resource type="Texture2D" uid="uid://dmja3kog00r88" path="res://assets/blackbutton.png" id="1_xnj1e"]
-[ext_resource type="Script" uid="uid://iu6y4nlwwv2o" path="res://scenes/blackbutton.gd" id="2_6w0uq"]
+[ext_resource type="Script" uid="uid://iu6y4nlwwv2o" path="res://scripts/blackbutton.gd" id="2_6w0uq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
 bg_color = Color(1, 1, 1, 1)

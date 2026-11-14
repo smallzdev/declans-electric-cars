@@ -3,6 +3,7 @@
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_f6hr7"]
 [ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="2_3o4jc"]
 [ext_resource type="Script" uid="uid://bt8do0msgkc87" path="res://scripts/difficulty_selection_buttons.gd" id="3_f6hr7"]
+[ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="4_3o4jc"]
 
 [sub_resource type="Theme" id="Theme_xjc7p"]
 
@@ -45,6 +46,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_y4671")
 theme_override_styles/hover = SubResource("StyleBoxFlat_oohqc")
 text = "Easy"
 script = ExtResource("3_f6hr7")
+
+[node name="BlackButton" parent="easyButton" unique_id=1395699096 instance=ExtResource("4_3o4jc")]
+layout_mode = 0
+offset_left = -65.99999
+offset_top = 346.0
+offset_right = 134.0
+offset_bottom = 546.0
 
 [node name="mediumButton" type="Button" parent="." unique_id=666718444]
 offset_left = 424.0
