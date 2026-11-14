@@ -1,13 +1,21 @@
 [gd_scene format=3 uid="uid://dswutdu57qymk"]
 
-[ext_resource type="Texture2D" uid="uid://d0oxbiwxof6qf" path="res://assets/blackbutton.png" id="1_xnj1e"]
+[ext_resource type="Texture2D" uid="uid://dmja3kog00r88" path="res://assets/blackbutton.png" id="1_xnj1e"]
 [ext_resource type="Script" uid="uid://iu6y4nlwwv2o" path="res://scenes/blackbutton.gd" id="2_6w0uq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ln24"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2fbfq"]
+border_color = Color(0.9122889, 0.9122889, 0.9122887, 1)
 
 [node name="BlackButton" type="Button" unique_id=1395699096]
 offset_left = -54.0
 offset_top = 469.0
 offset_right = 146.0
 offset_bottom = 669.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ln24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_2fbfq")
 icon = ExtResource("1_xnj1e")
 script = ExtResource("2_6w0uq")
 
