@@ -63,8 +63,8 @@ theme_override_font_sizes/font_size = 33
 text = "Declan is a mechanic who loves
 EVs. For some reason, his cars
 bounce a lot because they are
-buzzing with energy. He also hates
-gas cars for some reason, we 
+buzzing with energy. He also
+hates gas cars for some reason, we 
 don't know why. He just does. :0"
 
 [node name="BlackButton" parent="." unique_id=1395699096 instance=ExtResource("5_of347")]
