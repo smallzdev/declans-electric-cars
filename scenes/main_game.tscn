@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c7picmoeuvyjs"]
 
+[ext_resource type="Script" uid="uid://dr1oigndqfo3r" path="res://scenes/character_body_2d.gd" id="1_d2op2"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="1_s3esy"]
 [ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scenes/carsprite.gd" id="2_72e8q"]
+[ext_resource type="Texture2D" uid="uid://ypkfvimkgpo5" path="res://icon.svg" id="4_0rdsr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_72e8q"]
 atlas = ExtResource("1_s3esy")
@@ -88,6 +90,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
+size = Vector2(267, 387)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0rdsr"]
+size = Vector2(128.81494, 164.41156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ipu61"]
+size = Vector2(38, 705.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udkci"]
+size = Vector2(1194, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
+size = Vector2(1201, 34)
+
 [node name="Node2D" type="Node2D" unique_id=1047734597]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1890717628]
@@ -101,14 +118,6 @@ offset_left = 56.0
 offset_top = 32.0
 offset_right = 1105.0
 offset_bottom = 605.0
-
-[node name="carSprite" type="AnimatedSprite2D" parent="Panel" unique_id=458805979]
-unique_name_in_owner = true
-texture_filter = 1
-position = Vector2(542, 246)
-scale = Vector2(12, 12)
-sprite_frames = SubResource("SpriteFrames_bqqt6")
-script = ExtResource("2_72e8q")
 
 [node name="statLabel" type="Label" parent="Panel" unique_id=1489983222]
 layout_mode = 0
@@ -134,4 +143,73 @@ offset_bottom = 493.835
 theme_override_font_sizes/font_size = 33
 text = "start"
 
-[connection signal="pressed" from="Panel/startButton" to="Panel/carSprite" method="_on_start_button_pressed"]
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Panel" unique_id=982428187]
+script = ExtResource("1_d2op2")
+
+[node name="carSprite" type="AnimatedSprite2D" parent="Panel/CharacterBody2D" unique_id=458805979]
+unique_name_in_owner = true
+texture_filter = 1
+position = Vector2(542, 246)
+scale = Vector2(12, 12)
+sprite_frames = SubResource("SpriteFrames_bqqt6")
+script = ExtResource("2_72e8q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Panel/CharacterBody2D" unique_id=375917555]
+position = Vector2(547.5, 243.5)
+shape = SubResource("RectangleShape2D_stm8k")
+
+[node name="Borders" type="Control" parent="." unique_id=910012368]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LeftWall" type="Area2D" parent="Borders" unique_id=2139318185]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/LeftWall" unique_id=1632792236]
+position = Vector2(-18.835943, 330.4782)
+rotation = 1.5707964
+scale = Vector2(5.504358, 0.26562524)
+shape = SubResource("RectangleShape2D_0rdsr")
+
+[node name="BorderLeftSprite" type="Sprite2D" parent="Borders/LeftWall" unique_id=2095600290]
+position = Vector2(-19.000008, 329.00003)
+rotation = 1.5707964
+scale = Vector2(5.504358, 0.26562524)
+texture = ExtResource("4_0rdsr")
+
+[node name="RightWall" type="Area2D" parent="Borders" unique_id=1958226653]
+
+[node name="BorderRightSprite" type="Sprite2D" parent="Borders/RightWall" unique_id=1815830640]
+position = Vector2(1168, 326)
+rotation = 1.5707964
+scale = Vector2(5.504358, 0.26562524)
+texture = ExtResource("4_0rdsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/RightWall" unique_id=1295278607]
+position = Vector2(1168, 326.25)
+shape = SubResource("RectangleShape2D_ipu61")
+
+[node name="TopWall" type="Area2D" parent="Borders" unique_id=724713694]
+
+[node name="BorderTopSprite" type="Sprite2D" parent="Borders/TopWall" unique_id=1957253491]
+position = Vector2(588, -13)
+scale = Vector2(9.117187, 0.26562524)
+texture = ExtResource("4_0rdsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/TopWall" unique_id=1765027765]
+position = Vector2(587, -13)
+shape = SubResource("RectangleShape2D_udkci")
+
+[node name="BottomWall" type="Area2D" parent="Borders" unique_id=1314958344]
+
+[node name="BorderBottomSprite" type="Sprite2D" parent="Borders/BottomWall" unique_id=1684340899]
+position = Vector2(576.5, 664)
+scale = Vector2(9.117187, 0.26562524)
+texture = ExtResource("4_0rdsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/BottomWall" unique_id=139201839]
+position = Vector2(580.5, 662)
+shape = SubResource("RectangleShape2D_j3pc0")
+
+[connection signal="pressed" from="Panel/startButton" to="Panel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
