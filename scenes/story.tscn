@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="1_wq8l7"]
 [ext_resource type="Texture2D" uid="uid://jb0vyb6xcwhj" path="res://assets/paleorange-textbox.png" id="2_1octt"]
 [ext_resource type="FontFile" uid="uid://b27gm7wnkyqmv" path="res://assets/font/Silkscreen/slkscr.ttf" id="3_md1pp"]
+[ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="5_of347"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wu84c"]
 atlas = ExtResource("1_wq8l7")
@@ -41,21 +42,21 @@ horizontal_alignment = 1
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=313283762]
 texture_filter = 1
-position = Vector2(1004.0001, 447)
+position = Vector2(1006, 355)
 scale = Vector2(13, 13)
 sprite_frames = SubResource("SpriteFrames_of347")
 
 [node name="PaleorangeTextbox" type="Sprite2D" parent="." unique_id=1103113110]
 texture_filter = 1
-position = Vector2(527, 414)
+position = Vector2(526, 252)
 scale = Vector2(26.218748, 16.1875)
 texture = ExtResource("2_1octt")
 
 [node name="Label" type="Label" parent="." unique_id=438841327]
-offset_left = 213.0
-offset_top = 294.0
-offset_right = 1555.0
-offset_bottom = 513.0
+offset_left = 210.0
+offset_top = 117.0
+offset_right = 1552.0
+offset_bottom = 336.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_md1pp")
 theme_override_font_sizes/font_size = 33
@@ -65,3 +66,9 @@ bounce a lot because they are
 buzzing with energy. He also hates
 gas cars for some reason, we 
 don't know why. He just does. :0"
+
+[node name="BlackButton" parent="." unique_id=1395699096 instance=ExtResource("5_of347")]
+offset_left = 29.0
+offset_top = 420.0
+offset_right = 229.0
+offset_bottom = 620.0
