@@ -113,7 +113,6 @@ script = ExtResource("2_ekxnf")
 [node name="sfx_clicky" parent="." unique_id=1275234143 instance=ExtResource("5_8ln24")]
 
 [node name="bgm" parent="." unique_id=1933076139 instance=ExtResource("6_rtw2f")]
-position = Vector2(203, 115)
 
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playbutton_pressed"]
 [connection signal="pressed" from="creditsButton" to="playButton" method="_on_play_button_pressed"]

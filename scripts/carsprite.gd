@@ -21,10 +21,11 @@ func _process(delta: float) -> void:
 func carRepairStart():
 	pass
 	
-	#var colourcarFrames = ["white", "red"]
-	# var brokencarRNG = brokencarFrames.pick_random()
-	#carSprite.frame = brokencarRNG
-
+	var colourcarFrames = ["white", "red"]
+	var colourcarFramesRNG = colourcarFrames.pick_random()
+	var PartIssue = ["tire", "tire", "hv", "hv", "battery", "battery", "vent", "vent", "gas"]
+	var HVPartIssue = ["1", "2", "3"]
+	var TirePartIssue = ["1", "2", "3", "4"]
 
 func _on_start_button_pressed() -> void:
 	carRepairStart()
