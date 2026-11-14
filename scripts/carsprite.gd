@@ -2,12 +2,17 @@ extends AnimatedSprite2D
 
 @onready var carSprite = %carSprite
 
+# speech bubbles
+@onready var speechPannel = $"../../../TextBubble"
+@onready var declanSprite = $"../../../TextBubble/declan"
+@onready var characterNameLabel = $"../../../TextBubble/Label"
+@onready var textMessage = $"../../../TextBubble/textMessage"
+@onready var cp = $"../../../TextBubble/cp"
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var colourcarFrames = ["white", "red"]
 	
-
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -15,6 +20,7 @@ func _process(delta: float) -> void:
 
 func carRepairStart():
 	pass
+	
 	#var colourcarFrames = ["white", "red"]
 	# var brokencarRNG = brokencarFrames.pick_random()
 	#carSprite.frame = brokencarRNG
