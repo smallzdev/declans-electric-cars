@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bvwi7e63lp6jr" path="res://assets/arrow.png" id="1_6fbm8"]
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_pxtqk"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="2_ctj7d"]
-[ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scripts/carsprite.gd" id="3_6fbm8"]
 [ext_resource type="Texture2D" uid="uid://soh1wobcxoqe" path="res://assets/Add a subheading.png" id="5_4c15j"]
+[ext_resource type="PackedScene" uid="uid://dfirhps2kfhem" path="res://scenes/blackbutton2.tscn" id="6_4c15j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2op2"]
 atlas = ExtResource("2_ctj7d")
@@ -122,7 +122,6 @@ texture_filter = 1
 position = Vector2(558, 338.00003)
 scale = Vector2(14, 14)
 sprite_frames = SubResource("SpriteFrames_4c15j")
-script = ExtResource("3_6fbm8")
 
 [node name="1" type="Sprite2D" parent="." unique_id=339890475]
 position = Vector2(389, 178.99997)
@@ -250,3 +249,7 @@ rotation = -2.1396716
 scale = Vector2(0.0784544, 0.085154)
 skew = -0.026964784
 texture = ExtResource("5_4c15j")
+
+[node name="Node2D" parent="." unique_id=544811290 instance=ExtResource("6_4c15j")]
+position = Vector2(71, 152)
+scale = Vector2(0.5200006, 0.48000184)
