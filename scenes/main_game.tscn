@@ -130,22 +130,22 @@ animations = [{
 size = Vector2(267, 387)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2op2"]
-size = Vector2(24, 84)
+size = Vector2(44, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lht4u"]
-size = Vector2(60, 12)
+size = Vector2(60, 26)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxny"]
-size = Vector2(36.25, 24)
+size = Vector2(36.25, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rdsr"]
-size = Vector2(24.5, 36)
+size = Vector2(30.25, 36)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mgybc"]
-size = Vector2(24.5, 24)
+size = Vector2(39, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6hvq"]
-size = Vector2(36.5, 12.5)
+size = Vector2(36.5, 20.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyble"]
 size = Vector2(109, 146)
@@ -301,7 +301,7 @@ shape = SubResource("RectangleShape2D_stm8k")
 script = ExtResource("5_2l77h")
 
 [node name="HVCable1Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV1" unique_id=886250481]
-position = Vector2(626, 192)
+position = Vector2(629, 192)
 shape = SubResource("RectangleShape2D_d2op2")
 
 [node name="HVCable1Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV1" unique_id=1208195998]
@@ -312,22 +312,22 @@ shape = SubResource("RectangleShape2D_lht4u")
 script = ExtResource("5_2l77h")
 
 [node name="HVCable2Collision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=1552592247]
-position = Vector2(487.875, 330)
+position = Vector2(487.875, 334)
 shape = SubResource("RectangleShape2D_ygxny")
 
 [node name="HVCable2Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=1695823423]
-position = Vector2(458, 312)
+position = Vector2(455.125, 312)
 shape = SubResource("RectangleShape2D_0rdsr")
 
 [node name="HVCable2Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=925990686]
-position = Vector2(445.75, 282)
+position = Vector2(445.5, 282)
 shape = SubResource("RectangleShape2D_mgybc")
 
 [node name="HV3" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1965530202]
 script = ExtResource("5_2l77h")
 
 [node name="HVCable3Collision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV3" unique_id=1986702178]
-position = Vector2(547.75, 323.75)
+position = Vector2(547.75, 327.75)
 shape = SubResource("RectangleShape2D_s6hvq")
 
 [node name="BatteryPack" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=839980720]

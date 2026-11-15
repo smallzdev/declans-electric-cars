@@ -14,6 +14,8 @@ func _ready() -> void:
 	var colourcarFrames = ["white", "red"]
 	var colourcarFramesRNG = colourcarFrames.pick_random()
 	speechPannel.visible = false
+	Global.partsNeededtoFix = null
+	carSprite.frame = 0
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
