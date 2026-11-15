@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bp7aqtpsmelge"]
 
+[ext_resource type="Texture2D" uid="uid://bvwi7e63lp6jr" path="res://assets/arrow.png" id="1_6fbm8"]
 [ext_resource type="FontFile" uid="uid://ct0pwvp5fll0a" path="res://assets/font/Silkscreen/slkscre.ttf" id="1_pxtqk"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="2_ctj7d"]
 [ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scripts/carsprite.gd" id="3_6fbm8"]
+[ext_resource type="Texture2D" uid="uid://soh1wobcxoqe" path="res://assets/Add a subheading.png" id="5_4c15j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2op2"]
 atlas = ExtResource("2_ctj7d")
@@ -84,6 +86,13 @@ animations = [{
 
 [node name="Node2D" type="Node2D" unique_id=1958289756]
 
+[node name="8" type="Sprite2D" parent="." unique_id=760661800]
+position = Vector2(703, 257.99997)
+rotation = -2.0862875
+scale = Vector2(0.044377957, 0.08416141)
+skew = -0.07091522
+texture = ExtResource("1_6fbm8")
+
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1651431368]
 offset_left = -139.0
 offset_top = -90.0
@@ -102,15 +111,142 @@ text = "Manual"
 horizontal_alignment = 1
 
 [node name="mainPanel" type="Panel" parent="." unique_id=2111573428]
-offset_left = 56.0
+offset_left = 57.0
 offset_top = 32.0
-offset_right = 1105.0
+offset_right = 1106.0
 offset_bottom = 605.0
 
 [node name="carSprite" type="AnimatedSprite2D" parent="." unique_id=213069985]
 unique_name_in_owner = true
 texture_filter = 1
-position = Vector2(552, 340)
+position = Vector2(558, 338.00003)
 scale = Vector2(14, 14)
 sprite_frames = SubResource("SpriteFrames_4c15j")
 script = ExtResource("3_6fbm8")
+
+[node name="1" type="Sprite2D" parent="." unique_id=339890475]
+position = Vector2(389, 178.99997)
+rotation = 0.9138137
+scale = Vector2(0.066187486, 0.061125007)
+texture = ExtResource("1_6fbm8")
+
+[node name="1" type="Sprite2D" parent="1" unique_id=1238476825]
+position = Vector2(1956.7489, -121.95793)
+rotation = -0.1767351
+scale = Vector2(1.222554, 2.5692184)
+texture = ExtResource("1_6fbm8")
+
+[node name="2" type="Label" parent="." unique_id=365817415]
+offset_left = 132.0
+offset_top = 118.0
+offset_right = 275.0
+offset_bottom = 168.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = " wheel 1"
+
+[node name="4" type="Label" parent="." unique_id=1740783903]
+offset_left = 847.0
+offset_top = 494.0
+offset_right = 981.0
+offset_bottom = 544.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "wheel 4"
+
+[node name="3" type="Label" parent="." unique_id=1738075528]
+offset_left = 132.0
+offset_top = 502.0
+offset_right = 266.0
+offset_bottom = 552.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "wheel 3"
+
+[node name="5" type="Sprite2D" parent="." unique_id=2042016858]
+position = Vector2(724.00006, 132)
+rotation = -2.379753
+scale = Vector2(0.052707642, 0.062268876)
+skew = 0.061730027
+texture = ExtResource("1_6fbm8")
+
+[node name="6" type="Sprite2D" parent="." unique_id=1846750215]
+position = Vector2(373.99997, 545)
+rotation = 0.8163444
+scale = Vector2(0.05846228, 0.062272083)
+skew = 0.031029224
+texture = ExtResource("1_6fbm8")
+
+[node name="Label4" type="Label" parent="." unique_id=911445248]
+offset_left = 833.0
+offset_top = 117.0
+offset_right = 967.0
+offset_bottom = 167.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "wheel 2"
+
+[node name="7" type="Sprite2D" parent="." unique_id=1960733630]
+position = Vector2(729, 495.0001)
+rotation = 4.1425447
+scale = Vector2(0.06660971, 0.08439267)
+skew = -0.028223395
+texture = ExtResource("1_6fbm8")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=384241965]
+position = Vector2(713, 287.00003)
+rotation = -1.6930662
+scale = Vector2(0.07468427, 0.14150654)
+skew = -0.23079848
+texture = ExtResource("5_4c15j")
+
+[node name="Sprite2D5" type="Sprite2D" parent="Sprite2D5" unique_id=690486355]
+position = Vector2(-282.8484, -2677.9792)
+rotation = -3.5248086
+scale = Vector2(0.669394, 0.43025175)
+skew = -0.23079848
+texture = ExtResource("5_4c15j")
+
+[node name="Label5" type="Label" parent="." unique_id=129149275]
+offset_left = 884.0
+offset_top = 315.0
+offset_right = 1102.0
+offset_bottom = 365.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "battery pack"
+
+[node name="Label6" type="Label" parent="." unique_id=100082053]
+offset_left = 110.0
+offset_top = 408.0
+offset_right = 328.0
+offset_bottom = 458.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "cables"
+
+[node name="Label6" type="Label" parent="Label6" unique_id=682141842]
+layout_mode = 0
+offset_left = 815.0
+offset_top = -184.0
+offset_right = 1033.0
+offset_bottom = -134.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "cables"
+
+[node name="Label7" type="Label" parent="." unique_id=1630653030]
+offset_left = 200.0
+offset_top = 316.0
+offset_right = 314.0
+offset_bottom = 366.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "motor"
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=1242772185]
+position = Vector2(765, 208)
+rotation = -2.1396716
+scale = Vector2(0.0784544, 0.085154)
+skew = -0.026964784
+texture = ExtResource("5_4c15j")
