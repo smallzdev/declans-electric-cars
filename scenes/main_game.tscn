@@ -9,6 +9,44 @@
 [ext_resource type="Texture2D" uid="uid://dbvfmxwrn38cl" path="res://assets/cp.png" id="6_wi4c7"]
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="7_70vka"]
 [ext_resource type="Script" uid="uid://db1rasd82uocj" path="res://scenes/speech.gd" id="8_70vka"]
+[ext_resource type="Texture2D" uid="uid://bgrrpmt8j763q" path="res://assets/TICKANDX.png" id="10_nqdth"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wjob3"]
+atlas = ExtResource("7_70vka")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8xp80"]
+atlas = ExtResource("7_70vka")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sp04v"]
+atlas = ExtResource("7_70vka")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_wi4c7")
+}],
+"loop": 1,
+"name": &"cp",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wjob3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8xp80")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sp04v")
+}],
+"loop": 1,
+"name": &"declan",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d2op2"]
 atlas = ExtResource("1_s3esy")
@@ -115,6 +153,9 @@ size = Vector2(109, 146)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3id2"]
 size = Vector2(48, 72)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ge4u5"]
+size = Vector2(132, 37)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypnfv"]
 size = Vector2(128.98871, 102.941086)
 
@@ -129,40 +170,25 @@ size = Vector2(1194, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
 size = Vector2(1201, 34)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wjob3"]
-atlas = ExtResource("7_70vka")
-region = Rect2(0, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihbck"]
+atlas = ExtResource("10_nqdth")
+region = Rect2(0, 0, 400, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8xp80"]
-atlas = ExtResource("7_70vka")
-region = Rect2(32, 0, 32, 32)
+[sub_resource type="AtlasTexture" id="AtlasTexture_vnsdt"]
+atlas = ExtResource("10_nqdth")
+region = Rect2(0, 400, 400, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sp04v"]
-atlas = ExtResource("7_70vka")
-region = Rect2(0, 32, 32, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_stm8k"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_udkci"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_wi4c7")
+"texture": SubResource("AtlasTexture_ihbck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vnsdt")
 }],
 "loop": 1,
-"name": &"cp",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wjob3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_8xp80")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_sp04v")
-}],
-"loop": 1,
-"name": &"declan",
+"name": &"default",
 "speed": 5.0
 }]
 
@@ -179,6 +205,45 @@ offset_left = 56.0
 offset_top = 32.0
 offset_right = 1105.0
 offset_bottom = 605.0
+
+[node name="TextBubble" type="Panel" parent="mainPanel" unique_id=1284229236]
+visible = false
+layout_mode = 0
+offset_left = 108.0
+offset_top = 420.0
+offset_right = 1040.0
+offset_bottom = 566.0
+
+[node name="declan" type="AnimatedSprite2D" parent="mainPanel/TextBubble" unique_id=1704167450]
+texture_filter = 1
+position = Vector2(75.87501, 74.375015)
+scale = Vector2(3.5078127, 3.6484365)
+sprite_frames = SubResource("SpriteFrames_stm8k")
+animation = &"declan"
+script = ExtResource("8_70vka")
+
+[node name="Label" type="Label" parent="mainPanel/TextBubble" unique_id=220447370]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 4.0
+offset_right = 112.0
+offset_bottom = 27.0
+theme_override_fonts/font = ExtResource("1_0rdsr")
+text = "Declan"
+
+[node name="cp" type="Sprite2D" parent="mainPanel/TextBubble" unique_id=2135632847]
+position = Vector2(78, 74)
+scale = Vector2(1.84375, 1.921875)
+texture = ExtResource("6_wi4c7")
+
+[node name="textMessage" type="Label" parent="mainPanel/TextBubble" unique_id=1488570146]
+layout_mode = 0
+offset_left = 129.0
+offset_top = 37.0
+offset_right = 955.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+text = "text text text. If you're reading this the speach bubble is broken so ig click randomly??"
 
 [node name="statLabel" type="Label" parent="mainPanel" unique_id=1489983222]
 layout_mode = 0
@@ -288,6 +353,13 @@ script = ExtResource("5_2l77h")
 position = Vector2(638, 402)
 shape = SubResource("RectangleShape2D_n3id2")
 
+[node name="Vent" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1351218858]
+script = ExtResource("5_2l77h")
+
+[node name="ventCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/Vent" unique_id=1386892723]
+position = Vector2(548, 108)
+shape = SubResource("RectangleShape2D_ge4u5")
+
 [node name="Borders" type="Control" parent="." unique_id=910012368]
 layout_mode = 3
 anchors_preset = 0
@@ -357,43 +429,11 @@ offset_right = 1032.0
 offset_bottom = 522.0
 text = "MANUAL"
 
-[node name="TextBubble" type="Panel" parent="." unique_id=1284229236]
-visible = false
-offset_left = 164.0
-offset_top = 452.0
-offset_right = 1096.0
-offset_bottom = 598.0
-
-[node name="declan" type="AnimatedSprite2D" parent="TextBubble" unique_id=1704167450]
-texture_filter = 1
-position = Vector2(75.87501, 74.375015)
-scale = Vector2(3.5078127, 3.6484365)
-sprite_frames = SubResource("SpriteFrames_stm8k")
-animation = &"declan"
-script = ExtResource("8_70vka")
-
-[node name="Label" type="Label" parent="TextBubble" unique_id=220447370]
-layout_mode = 0
-offset_left = 45.0
-offset_top = 4.0
-offset_right = 112.0
-offset_bottom = 27.0
-theme_override_fonts/font = ExtResource("1_0rdsr")
-text = "Declan"
-
-[node name="cp" type="Sprite2D" parent="TextBubble" unique_id=2135632847]
-position = Vector2(78, 74)
-scale = Vector2(1.84375, 1.921875)
-texture = ExtResource("6_wi4c7")
-
-[node name="textMessage" type="Label" parent="TextBubble" unique_id=1488570146]
-layout_mode = 0
-offset_left = 129.0
-offset_top = 37.0
-offset_right = 955.0
-offset_bottom = 65.0
-theme_override_font_sizes/font_size = 15
-text = "text text text. If you're reading this the speach bubble is broken so ig click randomly??"
+[node name="tickandx" type="AnimatedSprite2D" parent="." unique_id=979653410]
+unique_name_in_owner = true
+position = Vector2(998, 138)
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_udkci")
 
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D" method="_on_start_button_pressed"]
 [connection signal="pressed" from="mainPanel/startButton" to="mainPanel/CharacterBody2D/carSprite" method="_on_start_button_pressed"]
@@ -405,4 +445,5 @@ text = "text text text. If you're reading this the speach bubble is broken so ig
 [connection signal="input_event" from="mainPanel/CharacterBody2D/RightTire" to="mainPanel/CharacterBody2D/RightTire" method="_on_righttire_event"]
 [connection signal="input_event" from="mainPanel/CharacterBody2D/BLeftTire" to="mainPanel/CharacterBody2D/BLeftTire" method="_on_blefttire_event"]
 [connection signal="input_event" from="mainPanel/CharacterBody2D/BRightTire" to="mainPanel/CharacterBody2D/BRightTire" method="_on_bright_event"]
+[connection signal="input_event" from="mainPanel/CharacterBody2D/Vent" to="mainPanel/CharacterBody2D/Vent" method="_on_vent_event"]
 [connection signal="pressed" from="manualButton" to="mainPanel/CharacterBody2D" method="_on_manual_button_pressed"]
