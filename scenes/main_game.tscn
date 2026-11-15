@@ -129,6 +129,9 @@ size = Vector2(1194, 34)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3pc0"]
 size = Vector2(1201, 34)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6fbm8"]
+bg_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wjob3"]
 atlas = ExtResource("7_70vka")
 region = Rect2(0, 0, 32, 32)
@@ -345,10 +348,11 @@ shape = SubResource("RectangleShape2D_j3pc0")
 wait_time = 5.0
 
 [node name="BlackButton" parent="." unique_id=1395699096 instance=ExtResource("5_ipu61")]
-offset_left = 56.0
-offset_top = 466.0
+offset_left = 55.999996
+offset_top = 465.0
 offset_right = 256.0
-offset_bottom = 666.0
+offset_bottom = 665.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_6fbm8")
 
 [node name="manualButton" type="Button" parent="." unique_id=825042965]
 offset_left = 954.0

@@ -251,5 +251,5 @@ skew = -0.026964784
 texture = ExtResource("5_4c15j")
 
 [node name="Node2D" parent="." unique_id=544811290 instance=ExtResource("6_4c15j")]
-position = Vector2(71, 152)
+position = Vector2(79, 215)
 scale = Vector2(0.5200006, 0.48000184)
