@@ -217,13 +217,13 @@ theme_override_font_sizes/font_size = 36
 text = "battery pack"
 
 [node name="Label6" type="Label" parent="." unique_id=100082053]
-offset_left = 110.0
-offset_top = 408.0
-offset_right = 328.0
-offset_bottom = 458.0
+offset_left = 109.0
+offset_top = 407.0
+offset_right = 327.0
+offset_bottom = 457.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
-text = "cables"
+text = "HV2"
 
 [node name="Label6" type="Label" parent="Label6" unique_id=682141842]
 layout_mode = 0
@@ -233,7 +233,7 @@ offset_right = 1033.0
 offset_bottom = -134.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
-text = "cables"
+text = "HV1"
 
 [node name="Label7" type="Label" parent="." unique_id=1630653030]
 offset_left = 200.0

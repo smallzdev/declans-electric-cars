@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dfirhps2kfhem"]
+
+[ext_resource type="Texture2D" uid="uid://dmja3kog00r88" path="res://assets/blackbutton.png" id="1_3o0si"]
+[ext_resource type="Script" uid="uid://daupff84km0rf" path="res://scenes/blackbutton2.gd" id="2_ie1tj"]
+
+[node name="Node2D" type="Node2D" unique_id=544811290]
+
+[node name="Button" type="Button" parent="." unique_id=2097504050]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("1_3o0si")
+script = ExtResource("2_ie1tj")
