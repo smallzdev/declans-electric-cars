@@ -15,11 +15,7 @@ func _ready() -> void:
 	var colourcarFramesRNG = colourcarFrames.pick_random()
 	speechPannel.visible = false
 	carSprite.frame = 0
-	
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	Global.partNeededtoFix = null
 
 func carRepairStart():
 	var PartIssue = ["tire", "tire", "hv", "hv", "battery", "battery", "vent", "vent", "gas"]
@@ -70,7 +66,6 @@ func carRepairStart():
 		await get_tree().create_timer(3).timeout
 		cp.visible = true
 		characterNameLabel.text = "Dre'Quan"
-		speechPannel.visible = false
 	
 	# Vent
 	elif PartIssueRNG == "vent":
@@ -83,7 +78,6 @@ func carRepairStart():
 		await get_tree().create_timer(3).timeout
 		cp.visible = true
 		characterNameLabel.text = "Dre'Quan"
-		speechPannel.visible = false
 	
 	# If it's a gas car
 	elif PartIssueRNG == "gas":

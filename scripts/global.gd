@@ -1,5 +1,7 @@
 extends Node
 
+var ready4NextTask = false
+
 # global variables
 
 # difficulty

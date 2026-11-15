@@ -41,6 +41,7 @@ func _on_hv2_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 		updateUI()
 		print("clicked shape")
 
+
 func _on_hv3_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT:
 		if Global.partNeededtoFix == "hv3":
@@ -108,11 +109,15 @@ func _on_blefttire_event(viewport: Node, event: InputEvent, shape_idx: int) -> v
 			tick.visible = true
 			Global.carsServed += 1
 			Global.totalRepaired +=1
+			await get_tree().create_timer(1).timeout
+			tick.visible = false
 		else:
 			tick.frame = 1
 			tick.visible = true
 			Global.carsServed += 1
 			Global.repairsFailed += 1
+			await get_tree().create_timer(1).timeout
+			tick.visible = false
 		updateUI()
 		print("clicked shape")
 

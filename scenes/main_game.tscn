@@ -133,7 +133,7 @@ size = Vector2(267, 387)
 size = Vector2(44, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lht4u"]
-size = Vector2(60, 26)
+size = Vector2(60, 33.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxny"]
 size = Vector2(36.25, 32)
@@ -145,7 +145,7 @@ size = Vector2(30.25, 36)
 size = Vector2(39, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6hvq"]
-size = Vector2(36.5, 20.5)
+size = Vector2(58, 23.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyble"]
 size = Vector2(109, 146)
@@ -213,6 +213,7 @@ mouse_filter = 2
 
 [node name="TextBubble" type="Panel" parent="mainPanel" unique_id=1284229236]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 108.0
 offset_top = 420.0
@@ -304,7 +305,7 @@ position = Vector2(629, 192)
 shape = SubResource("RectangleShape2D_d2op2")
 
 [node name="HVCable1Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV1" unique_id=1208195998]
-position = Vector2(596, 144)
+position = Vector2(596, 143.75)
 shape = SubResource("RectangleShape2D_lht4u")
 
 [node name="HV2" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1957138954]
@@ -326,7 +327,7 @@ shape = SubResource("RectangleShape2D_mgybc")
 script = ExtResource("5_2l77h")
 
 [node name="HVCable3Collision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV3" unique_id=1986702178]
-position = Vector2(547.75, 327.75)
+position = Vector2(549, 329.25)
 shape = SubResource("RectangleShape2D_s6hvq")
 
 [node name="BatteryPack" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=839980720]
