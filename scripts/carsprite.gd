@@ -14,7 +14,6 @@ func _ready() -> void:
 	var colourcarFrames = ["white", "red"]
 	var colourcarFramesRNG = colourcarFrames.pick_random()
 	speechPannel.visible = false
-	Global.partsNeededtoFix = null
 	carSprite.frame = 0
 	
 
@@ -38,10 +37,12 @@ func carRepairStart():
 		textMessage.text = "I would like my tire" + str(TirePartIssueRNG) + " replaced please Declan."
 		await get_tree().create_timer(4).timeout
 		cp.visible = false
+		characterNameLabel.text = "Declan"
 		textMessage.text = "Okay sure thing!"
 		await get_tree().create_timer(3).timeout
 		speechPannel.visible = false
 		cp.visible = true
+		characterNameLabel.text = "Dre'Quan"
 		
 	# HV Cables
 	elif PartIssueRNG == "hv":
@@ -51,10 +52,12 @@ func carRepairStart():
 		textMessage.text = "One of my HV Cables are broken, I think it's HV" + str(HVPartIssueRNG) + ". Can you fix it?"
 		await get_tree().create_timer(4).timeout
 		cp.visible = false
+		characterNameLabel.text = "Declan"
 		textMessage.text = "Yes, of course I can fix it~!"
 		await get_tree().create_timer(3).timeout
 		speechPannel.visible = false
 		cp.visible = true
+		characterNameLabel.text = "Dre'Quan"
 	
 	# battery pack
 	elif PartIssueRNG == "battery":
@@ -62,9 +65,11 @@ func carRepairStart():
 		textMessage.text = "My battery pack is kinda dead. Plz fix."
 		await get_tree().create_timer(4).timeout
 		cp.visible = false
+		characterNameLabel.text = "Declan"
 		textMessage.text = "Okay, I'll try my best :D"
 		await get_tree().create_timer(3).timeout
 		cp.visible = true
+		characterNameLabel.text = "Dre'Quan"
 		speechPannel.visible = false
 	
 	# Vent
@@ -73,9 +78,11 @@ func carRepairStart():
 		textMessage.text = "My vent is acting... weird.. plz help"
 		await get_tree().create_timer(4).timeout
 		cp.visible = false
+		characterNameLabel.text = "Declan"
 		textMessage.text = "Hmmm weird. Let me fix it."
 		await get_tree().create_timer(3).timeout
 		cp.visible = true
+		characterNameLabel.text = "Dre'Quan"
 		speechPannel.visible = false
 	
 	# If it's a gas car
@@ -84,10 +91,12 @@ func carRepairStart():
 		textMessage.text = "Umm do u accept gas cars?"
 		await get_tree().create_timer(4).timeout
 		cp.visible = false
+		characterNameLabel.text = "Declan"
 		textMessage.text = "NO EWWW!!!! get outta here."
 		await get_tree().create_timer(3).timeout
 		speechPannel.visible = false
 		cp.visible = true
+		characterNameLabel.text = "Dre'Quan"
 		Global.gasRejected += 1
 		
 func _on_start_button_pressed() -> void:

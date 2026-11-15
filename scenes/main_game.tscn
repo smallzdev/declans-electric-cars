@@ -171,7 +171,7 @@ size = Vector2(1194, 34)
 size = Vector2(1201, 34)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2l77h"]
-bg_color = Color(0.45882353, 0.45882353, 0.45882353, 1)
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ihbck"]
 atlas = ExtResource("10_nqdth")
@@ -213,7 +213,6 @@ mouse_filter = 2
 
 [node name="TextBubble" type="Panel" parent="mainPanel" unique_id=1284229236]
 unique_name_in_owner = true
-visible = false
 layout_mode = 0
 offset_left = 108.0
 offset_top = 420.0
@@ -233,12 +232,12 @@ script = ExtResource("8_70vka")
 [node name="characterLabel" type="Label" parent="mainPanel/TextBubble" unique_id=220447370]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 45.0
+offset_left = 38.0
 offset_top = 4.0
-offset_right = 112.0
+offset_right = 124.0
 offset_bottom = 27.0
 theme_override_fonts/font = ExtResource("1_0rdsr")
-text = "Declan"
+text = "Dre'Quan"
 
 [node name="cp" type="Sprite2D" parent="mainPanel/TextBubble" unique_id=2135632847]
 unique_name_in_owner = true
