@@ -3,11 +3,11 @@ extends AnimatedSprite2D
 @onready var carSprite = %carSprite
 
 # speech bubbles
-@onready var speechPannel = $"../../../TextBubble"
-@onready var declanSprite = $"../../../TextBubble/declan"
-@onready var characterNameLabel = $"../../../TextBubble/Label"
-@onready var textMessage = $"../../../TextBubble/textMessage"
-@onready var cp = $"../../../TextBubble/cp"
+@onready var speechPannel = %TextBubble
+@onready var declanSprite = %declan
+@onready var characterNameLabel = %characterLabel
+@onready var textMessage = %textMessage
+@onready var cp = %cp
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

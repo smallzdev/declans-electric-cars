@@ -202,22 +202,27 @@ offset_left = -139.0
 offset_top = -90.0
 offset_right = 1241.0
 offset_bottom = 747.0
+mouse_filter = 2
 
 [node name="mainPanel" type="Panel" parent="." unique_id=1473717622]
 offset_left = 56.0
 offset_top = 32.0
 offset_right = 1105.0
 offset_bottom = 605.0
+mouse_filter = 2
 
 [node name="TextBubble" type="Panel" parent="mainPanel" unique_id=1284229236]
+unique_name_in_owner = true
 visible = false
 layout_mode = 0
 offset_left = 108.0
 offset_top = 420.0
 offset_right = 1040.0
 offset_bottom = 566.0
+mouse_filter = 2
 
 [node name="declan" type="AnimatedSprite2D" parent="mainPanel/TextBubble" unique_id=1704167450]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(75.87501, 74.375015)
 scale = Vector2(3.5078127, 3.6484365)
@@ -225,7 +230,8 @@ sprite_frames = SubResource("SpriteFrames_stm8k")
 animation = &"declan"
 script = ExtResource("8_70vka")
 
-[node name="Label" type="Label" parent="mainPanel/TextBubble" unique_id=220447370]
+[node name="characterLabel" type="Label" parent="mainPanel/TextBubble" unique_id=220447370]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 45.0
 offset_top = 4.0
@@ -235,11 +241,13 @@ theme_override_fonts/font = ExtResource("1_0rdsr")
 text = "Declan"
 
 [node name="cp" type="Sprite2D" parent="mainPanel/TextBubble" unique_id=2135632847]
+unique_name_in_owner = true
 position = Vector2(78, 74)
 scale = Vector2(1.84375, 1.921875)
 texture = ExtResource("6_wi4c7")
 
 [node name="textMessage" type="Label" parent="mainPanel/TextBubble" unique_id=1488570146]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 129.0
 offset_top = 37.0
@@ -249,6 +257,7 @@ theme_override_font_sizes/font_size = 15
 text = "text text text. If you're reading this the speach bubble is broken so ig click randomly??"
 
 [node name="statLabel" type="Label" parent="mainPanel" unique_id=1489983222]
+unique_name_in_owner = true
 layout_mode = 0
 offset_left = 13.0
 offset_top = 8.0
@@ -435,6 +444,7 @@ text = "MANUAL"
 
 [node name="tickandx" type="AnimatedSprite2D" parent="." unique_id=979653410]
 unique_name_in_owner = true
+visible = false
 position = Vector2(998, 138)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_udkci")
