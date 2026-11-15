@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dr1oigndqfo3r" path="res://scripts/character_body_2d.gd" id="1_d2op2"]
 [ext_resource type="Texture2D" uid="uid://p4a85omjtttx" path="res://assets/cars/white-ev.png" id="1_s3esy"]
 [ext_resource type="Script" uid="uid://caca63witdwb3" path="res://scripts/carsprite.gd" id="2_72e8q"]
+[ext_resource type="Script" uid="uid://ceicoxxkbvkwy" path="res://scenes/collisionshapes.gd" id="5_2l77h"]
 [ext_resource type="PackedScene" uid="uid://dswutdu57qymk" path="res://scenes/black_button.tscn" id="5_ipu61"]
 [ext_resource type="Texture2D" uid="uid://dbvfmxwrn38cl" path="res://assets/cp.png" id="6_wi4c7"]
 [ext_resource type="Texture2D" uid="uid://dhubirgkaeyat" path="res://assets/declan.png" id="7_70vka"]
@@ -90,32 +91,26 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_stm8k"]
 size = Vector2(267, 387)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vddhp"]
-size = Vector2(38, 37.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_br2rd"]
-size = Vector2(39, 86)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2op2"]
+size = Vector2(24, 84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lht4u"]
 size = Vector2(60, 12)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2op2"]
-size = Vector2(24, 84)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyble"]
-size = Vector2(109, 146)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgybc"]
-size = Vector2(24.5, 24)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxny"]
+size = Vector2(36.25, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0rdsr"]
 size = Vector2(24.5, 36)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ygxny"]
-size = Vector2(36.25, 24)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mgybc"]
+size = Vector2(24.5, 24)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s6hvq"]
 size = Vector2(36.5, 12.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyble"]
+size = Vector2(109, 146)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n3id2"]
 size = Vector2(48, 72)
@@ -224,58 +219,78 @@ script = ExtResource("2_72e8q")
 [node name="fullBodyCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=375917555]
 position = Vector2(547.5, 243.5)
 shape = SubResource("RectangleShape2D_stm8k")
+script = ExtResource("5_2l77h")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1716378756]
-position = Vector2(513, 215.75)
-shape = SubResource("RectangleShape2D_vddhp")
+[node name="HV1" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1225964585]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=199484790]
-position = Vector2(464.5, 240)
-shape = SubResource("RectangleShape2D_br2rd")
-
-[node name="HVCable1Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1208195998]
-position = Vector2(596, 144)
-shape = SubResource("RectangleShape2D_lht4u")
-
-[node name="HVCable1Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=886250481]
+[node name="HVCable1Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV1" unique_id=886250481]
 position = Vector2(626, 192)
 shape = SubResource("RectangleShape2D_d2op2")
+script = ExtResource("5_2l77h")
 
-[node name="BatteryBackCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1892720498]
-position = Vector2(548.5, 246)
-shape = SubResource("RectangleShape2D_fyble")
+[node name="HVCable1Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV1" unique_id=1208195998]
+position = Vector2(596, 144)
+shape = SubResource("RectangleShape2D_lht4u")
+script = ExtResource("5_2l77h")
 
-[node name="HVCable2Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=925990686]
-position = Vector2(445.75, 282)
-shape = SubResource("RectangleShape2D_mgybc")
+[node name="HV2" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1957138954]
 
-[node name="HVCable2Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1695823423]
-position = Vector2(458, 312)
-shape = SubResource("RectangleShape2D_0rdsr")
-
-[node name="HVCable2Collision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1552592247]
+[node name="HVCable2Collision3" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=1552592247]
 position = Vector2(487.875, 330)
 shape = SubResource("RectangleShape2D_ygxny")
+script = ExtResource("5_2l77h")
 
-[node name="HVCable3Collision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1986702178]
+[node name="HVCable2Collision2" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=1695823423]
+position = Vector2(458, 312)
+shape = SubResource("RectangleShape2D_0rdsr")
+script = ExtResource("5_2l77h")
+
+[node name="HVCable2Collision1" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV2" unique_id=925990686]
+position = Vector2(445.75, 282)
+shape = SubResource("RectangleShape2D_mgybc")
+script = ExtResource("5_2l77h")
+
+[node name="HV3" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1965530202]
+
+[node name="HVCable3Collision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/HV3" unique_id=1986702178]
 position = Vector2(547.75, 323.75)
 shape = SubResource("RectangleShape2D_s6hvq")
+script = ExtResource("5_2l77h")
 
-[node name="leftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=677331527]
+[node name="BatteryPack" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=839980720]
+
+[node name="BatteryPackCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/BatteryPack" unique_id=1892720498]
+position = Vector2(548.5, 246)
+shape = SubResource("RectangleShape2D_fyble")
+script = ExtResource("5_2l77h")
+
+[node name="LeftTire" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=2032854693]
+
+[node name="leftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/LeftTire" unique_id=677331527]
 position = Vector2(458, 90)
 shape = SubResource("RectangleShape2D_n3id2")
+script = ExtResource("5_2l77h")
 
-[node name="rightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2099292475]
+[node name="RightTire" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=586308295]
+
+[node name="rightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/RightTire" unique_id=2099292475]
 position = Vector2(638, 90)
 shape = SubResource("RectangleShape2D_n3id2")
+script = ExtResource("5_2l77h")
 
-[node name="bleftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=2021915373]
+[node name="BLeftTire" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1621090630]
+
+[node name="bleftTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/BLeftTire" unique_id=2021915373]
 position = Vector2(458, 402)
 shape = SubResource("RectangleShape2D_n3id2")
+script = ExtResource("5_2l77h")
 
-[node name="brightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D" unique_id=1808934683]
+[node name="BRightTire" type="Area2D" parent="mainPanel/CharacterBody2D" unique_id=1710902856]
+
+[node name="brightTireCollision" type="CollisionShape2D" parent="mainPanel/CharacterBody2D/BRightTire" unique_id=1808934683]
 position = Vector2(638, 402)
 shape = SubResource("RectangleShape2D_n3id2")
+script = ExtResource("5_2l77h")
 
 [node name="Borders" type="Control" parent="." unique_id=910012368]
 layout_mode = 3
